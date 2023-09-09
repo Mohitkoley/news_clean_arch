@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Create Clean Architecture Folder",
+        "type": "shell",
+        "command": "node",
+        "args": ["D:/flutter_projects/vs_code_custom/createCleanArchitectureFolders.js", "${workspaceFolder}"],
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
+  

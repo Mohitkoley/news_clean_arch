@@ -1,0 +1,12 @@
+{
+    "name": "create_clean_architecture",
+    "description": "Create clean architecture",
+    "context": ["folder"],
+    "command": {
+        "command": "create_clean_architecture.create_clean_architecture",
+        "args": {
+            "name": "${file_name}"
+        }
+    }
+}
+
