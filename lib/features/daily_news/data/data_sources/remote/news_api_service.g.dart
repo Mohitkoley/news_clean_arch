@@ -21,10 +21,11 @@ class _NewsApiService implements NewsApiService {
   String? baseUrl;
 
   @override
-  Future<List<ArticleModel>> getNewsArticles(
-      {String apiKey = AppConstants.apiKey,
-      String? country,
-      String? category}) async {
+  Future<List<ArticleModel>> getNewsArticles({
+    String apiKey = AppConstants.apiKey,
+    String? country,
+    String? category,
+  }) async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{
       r'apiKey': apiKey,
@@ -33,7 +34,7 @@ class _NewsApiService implements NewsApiService {
     };
     queryParameters.removeWhere((k, v) => v == null);
     final _headers = <String, dynamic>{};
-    const Map<String, dynamic>? _data = null;
+    final Map<String, dynamic>? _data = null;
     final _result = await _dio
         .fetch<Map<String, dynamic>>(_setStreamType<List<ArticleModel>>(Options(
       method: 'GET',

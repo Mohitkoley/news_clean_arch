@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:clean_arch/core/constants/api_endpoints.dart';
 import 'package:clean_arch/core/constants/constants.dart';
 import 'package:clean_arch/features/daily_news/data/models/article_model.dart';
