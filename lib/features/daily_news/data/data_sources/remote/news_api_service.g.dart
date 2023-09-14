@@ -22,7 +22,7 @@ class _NewsApiService implements NewsApiService {
 
   @override
   Future<List<ArticleModel>> getNewsArticles({
-    String apiKey = AppConstants.apiKey,
+    String? apiKey,
     String? country,
     String? category,
   }) async {

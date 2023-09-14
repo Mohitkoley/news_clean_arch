@@ -1,3 +1,4 @@
+import 'package:clean_arch/enviroment/env.dart';
 import 'package:clean_arch/features/daily_news/presentation/bloc/article/remote/remote_article_bloc.dart';
 import 'package:clean_arch/features/daily_news/presentation/pages/home/daily_news_screen.dart';
 import 'package:clean_arch/features/injection_container.dart';
@@ -7,7 +8,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'shared/export_main_files.dart';
 
 Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   await initializeDependencies();
+  Enviroment();
   runApp(const MyApp());
 }
 

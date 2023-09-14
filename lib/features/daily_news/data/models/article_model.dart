@@ -33,4 +33,17 @@ class ArticleModel extends ArticleEntity {
         publishedAt: json["publishedAt"] ?? "",
         content: json["content"] ?? "",
       );
+
+  factory ArticleModel.fromEntity(ArticleEntity) {
+    return ArticleModel(
+      id: ArticleEntity.id,
+      author: ArticleEntity.author,
+      title: ArticleEntity.title,
+      description: ArticleEntity.description,
+      url: ArticleEntity.url,
+      urlToImage: ArticleEntity.urlToImage,
+      publishedAt: ArticleEntity.publishedAt,
+      content: ArticleEntity.content,
+    );
+  }
 }
